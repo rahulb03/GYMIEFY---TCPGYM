@@ -1,0 +1,32 @@
+.custom-input-container {
+    position: relative;
+  }
+  
+  .custom-input-container input {
+    padding-right: 2.5rem; /* Adjust padding to make room for the icon */
+  }
+  
+  .icon-container {
+    background-color: #ffffff !important;
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    /* margin-bottom:20px; */
+  }
+  
+  .icon-container .fa-eye,
+  .icon-container .fa-eye-slash {
+    color: #6c757d; /* Change this to your desired icon color */
+    font-size: 30px !important;
+  }
+  
+  
+  icon{
+    size: 30px;
+  }

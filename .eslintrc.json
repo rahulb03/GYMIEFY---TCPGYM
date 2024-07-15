@@ -1,0 +1,23 @@
+{
+  "extends": ["next", "prettier", "next/core-web-vitals", "eslint:recommended"],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "quotes": "off",
+    // "no-undef": [ "off" ],
+    "react-hooks/exhaustive-deps": ["off"],
+    "semi": "off",
+    // "react/jsx-indent": ["warn", 0],
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "no-use-before-define": "warn",
+    "import/order": "off",
+    "no-console": "off",
+    "react/prop-types": "off",
+    "react/js-filename-extension": "off",
+    "camelcase": ["off"],
+    "no-confusing-arrow": "warn",
+    "object-curly-spacing": ["warn", "always"],
+    "brace-style": "warn",
+    "no-unused-vars": "off",
+    "eqeqeq": "off"
+  }
+}
