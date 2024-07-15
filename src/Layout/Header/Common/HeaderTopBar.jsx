@@ -28,7 +28,7 @@ const HeaderTopBar = () => {
         <Row>
           <TopbarLeft />
           <TopbarSlider />
-          <Col lg={3}>
+          {/* <Col lg={3}>
             <ul className='about-list right-nav-about'>
               <li className='right-nav-list'>
                 <TopLanguage />
@@ -37,7 +37,7 @@ const HeaderTopBar = () => {
                 <HeaderCurrency />
               </li>
             </ul>
-          </Col>
+          </Col> */}
         </Row>
       </div>
     </div>

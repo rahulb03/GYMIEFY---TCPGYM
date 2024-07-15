@@ -32,13 +32,13 @@ export const BlogAPI = "/blog"
 export const TagAPI = "/tag";
 
 // Currency API
-export const CurrencyAPI = "/currency";
+// export const CurrencyAPI = "/currency";
 
 // Setting API
-export const SettingAPI = "/settings"
+// export const SettingAPI = "/settings"
 
 // Wishlist API
-export const WishlistAPI = "/wishlist"
+// export const WishlistAPI = "/wishlist"
 
 // Cart API
 export const AddToCartAPI = '/cart'

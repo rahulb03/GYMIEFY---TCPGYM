@@ -25,7 +25,7 @@ const NewsLetterModal = () => {
   };
   return (
     <>
-      <CustomModal extraFunction={extraFunction} modal={modal} setModal={setModal} classes={{ customChildren: true, modalClass: 'modal-lg newsletter-modal theme-modal' }}>
+      {/* <CustomModal extraFunction={extraFunction} modal={modal} setModal={setModal} classes={{ customChildren: true, modalClass: 'modal-lg newsletter-modal theme-modal' }}>
         <ModalHeader className='p-0' toggle={extraFunction} />
         <div className='modal-box'>
           <div className='modal-image'>
@@ -48,7 +48,7 @@ const NewsLetterModal = () => {
             </div>
           </div>
         </div>
-      </CustomModal>
+      </CustomModal> */}
     </>
   );
 };
