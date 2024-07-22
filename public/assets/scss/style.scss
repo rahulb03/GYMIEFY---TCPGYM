@@ -1,3 +1,7 @@
+
+@import "/node_modules/@fontsource/roboto/500.css";
+
+
 .theme-color-1 {
   --theme-color: #d99f46;
 }
@@ -18,11 +22,9 @@
   --theme-color: #417394;
 }
 
-body {
-  background-color: #E5E5E5!important;
-}
 
-@import "/node_modules/@fontsource/roboto/500.css";
+
+
 
 /* utils */
 @import 'utils/variables';
@@ -87,7 +89,7 @@ body {
 @import 'themes/rtl';
 
 body {
-  font-family: "Roboto";
+  font-family: "Roboto"z;
 }
 
 .bg-lightGrey {
@@ -99,8 +101,57 @@ body {
 }
 
 .job-card {
-  border: 1px solid rgb(194 173 173) !important;
+  border: 1px solid #ececec !important;
+  gap:10px !important;
+
+  .button-holder{
+   
+    display:flex;
+    justify-content:flex-end;
+    margin:10px;
+    margin-right:30px;
+    
+   
+  }
+ 
+  button.deal-button icon{
+    font-size:16px;
+  }
+
+ .deal-button{
+  background-color: #FFF5EB;
+  width:137px;
+  height:50px;
+  color: var(--theme-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  // display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+ 
+ 
+  }
+
+  button:hover{
+    transition: background-color 0.5s;
+    background-color:var(--theme-color);
+    color:#FFF5EB;
+  }
+
+
+  
   .card-footer {
     border-radius:0px 0px 15px 15px!important;
+    background-color:#f8f7f4;
   }
 }
+
+body {
+   background-color: #fafafa!important;
+  font-family: 'roboto';
+}
+
+// style={{backgroundColor:'#a9a9a9' , border:"1px solid #ececec" , boxShadow:"0 8px 16px rgba(0, 0, 0, 0.2)"}}

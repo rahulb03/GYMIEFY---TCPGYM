@@ -9,7 +9,7 @@ import NotificationData from './NotificationData';
 const AccountNotificationContent = () => {
   return (
     <>
-      <Breadcrumb title={'Notification'} subNavigation={[{ name: 'Notification' }]} />
+      {/* <Breadcrumb title={'Notification'} subNavigation={[{ name: 'Notification' }]} />
       <WrapperComponent classes={{ sectionClass: 'user-dashboard-section section-b-space' }} customCol={true}>
         <AccountSidebar tabActive={'notification'} />
 
@@ -23,7 +23,7 @@ const AccountNotificationContent = () => {
             </TabContent>
           </div>
         </Col>
-      </WrapperComponent>
+      </WrapperComponent> */}
     </>
   );
 };

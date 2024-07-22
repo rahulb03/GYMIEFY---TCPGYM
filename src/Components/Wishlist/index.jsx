@@ -5,13 +5,13 @@ import { Col } from 'reactstrap';
 import Breadcrumb from '../Common/Breadcrumb';
 import WrapperComponent from '../Common/WrapperComponent';
 import ProductBox1 from '../Common/ProductBox/ProductBox1/ProductBox1';
-import { WishlistAPI } from '@/Utils/AxiosUtils/API';
+import {  } from '@/Utils/AxiosUtils/API';
 import request from '@/Utils/AxiosUtils';
 import Loader from '@/Layout/Loader';
 
 const WishlistContent = () => {
   const [wishlistState, setWishlistState] = useState([]);
-  const { data, isLoading, refetch } = useQuery([WishlistAPI], () => request({ url: WishlistAPI }), { enabled: true, refetchOnWindowFocus: false, select: (res) => res?.data });
+  const { data, isLoading, refetch } = useQuery([], () => request({ url: '' }), { enabled: true, refetchOnWindowFocus: false, select: (res) => res?.data });
   useEffect(() => {
     if (data?.data) {
       setWishlistState([...data?.data]);

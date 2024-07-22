@@ -7,22 +7,18 @@
   }
   
 
-  /* .job-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-  }
-   */
+ 
 
   .job-post {
     
     margin-left:30px;
-    margin-top:20px;
+    margin-top:10px;
+    gap:20px;
   }
    .job-grid {
     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); Ensure 3 columns */
-    grid-template-columns: repeat(3, 1fr); /* Ensure 3 columns */
+    
+    grid-template-columns: repeat(3, 1fr); 
 
     gap: 20px;
   }
@@ -165,71 +161,7 @@
   background-color:red;
 }
 
-/* Default styling for desktop */
-/* .search-box1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
 
-.search-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.search-bar {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.find-job-btn {
-  margin-left: 10px;
-  padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-}
-
-.mode-selection {
-  display: flex;
-  align-items: center;
-}
-
-.suggestions-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 10;
-}
-
-.job-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.job-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.centered-message {
-  text-align: center;
-  margin: 20px 0;
-} */
-
-/* Medium devices (tablets, 768px and up) */
 @media (max-width: 992px) {
   .job-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -244,7 +176,7 @@
   }
 }
 
-/* Small devices (phones, 600px and up) */
+
 @media (max-width: 600px) {
   .job-grid {
     grid-template-columns: 1fr;

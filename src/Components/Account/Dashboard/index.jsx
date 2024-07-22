@@ -5,6 +5,7 @@ import AccountSidebar from '../Common/AccountSidebar';
 import { Col, TabContent, TabPane } from 'reactstrap';
 import DashboardContent from './DashboardContent';
 import ResponsiveMenuOpen from '../Common/ResponsiveMenuOpen';
+import ProfilePassword from './ProfilePassword';
 
 const AccountDashboard = () => {
   return (
@@ -18,6 +19,7 @@ const AccountDashboard = () => {
             <TabContent>
               <TabPane className='show active'>
                 <DashboardContent />
+                <ProfilePassword />
               </TabPane>
             </TabContent>
           </div>

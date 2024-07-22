@@ -14,13 +14,13 @@ const AccountOrders = () => {
         <AccountSidebar tabActive={'order'} />
         <Col xxl={9} lg={8}>
           <ResponsiveMenuOpen />
-          <div className='dashboard-right-sidebar'>
+          {/* <div className='dashboard-right-sidebar'>
             <TabContent>
               <TabPane className='show active'>
                 <MyOrders />
               </TabPane>
             </TabContent>
-          </div>
+          </div> */}
         </Col>
       </WrapperComponent>
     </>

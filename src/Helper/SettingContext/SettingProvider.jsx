@@ -9,7 +9,7 @@ const SettingProvider = (props) => {
   const [selectedCurrency, setSelectedCurrency] = useState({});
   const [settingData, setSettingData] = useState({});
   const [settingObj, setSettingObj] = useState({});
-  const { data, isLoading, refetch } = useQuery([SettingAPI],() => request({ url: SettingAPI }),{enabled: false,refetchOnWindowFocus: false,select: (res) => res?.data?.values,});
+  const { data, isLoading, refetch } = useQuery([],() => request({ url: '' }),{enabled: false,refetchOnWindowFocus: false,select: (res) => res?.data?.values,});
   useEffect(() => {
     refetch();
   }, []);

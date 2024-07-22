@@ -1,12 +1,16 @@
-export const API_URL = 'https://brainstuck.in/techsamrajya/gym/';
-export const ASSETS_URL = 'https://brainstuck.in/techsamrajya/gym/assets/';
+// export const API_URL = 'https://brainstuck.in/techsamrajya/gym/';
+export const API_URL = '';
+// export const ASSETS_URL = 'https://brainstuck.in/techsamrajya/gym/assets/';
+export const ASSETS_URL = '';
 
 
 export const SITE_NAME = 'TCP GYM'
 export const MOBILE_NO = '09925242423';
 export const EMAIL_ADD = 'support@tcpgym.com';
-export const DARK_LOGO = 'https://brainstuck.in/techsamrajya/gym/assets/images/logo-dark.png';
-export const LIGHT_LOGO = 'https://brainstuck.in/techsamrajya/gym/assets/images/logo-light.png';
+// export const DARK_LOGO = 'https://brainstuck.in/techsamrajya/gym/assets/images/logo-dark.png';
+export const DARK_LOGO = '';
+// export const LIGHT_LOGO = 'https://brainstuck.in/techsamrajya/gym/assets/images/logo-light.png';
+export const LIGHT_LOGO = '';
 export const MAP = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.907247655391!2d72.87045717401313!3d21.156089183395544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0501e25555555%3A0x4d8424a1521b7815!2sThe%20Cosmic%20Power%20Gym!5e0!3m2!1sen!2sin!4v1710074191364!5m2!1sen!2sin';
 
 export const sliderData = [
@@ -324,15 +328,11 @@ export const jobData = [
   export const API_BASE_URL = 'http://77.37.47.144:4200/api/frontend/'
 
 
-//   export const API_BASE_URL = 'http://77.37.47.144:4200/api/frontend'
-
-  
-
   //front end urls
 
   export const REGISTER_API =  API_BASE_URL + 'auth/signup' ;
 
-  export const LOGIN_API =  'http://77.37.47.144:4200/api/frontend/auth/signin';
+  export const LOGIN_API =  API_BASE_URL + 'auth/signin';
 
   export const FORGOT_PASSWORD = API_BASE_URL + 'auth/changepassword';
 
@@ -342,18 +342,11 @@ export const jobData = [
   
   export const GET_PROFILE  =   API_BASE_URL + 'auth/profile' ;
 
+//   export const GET_JOB = API_BASE_URL + 'job' ;
 
-//   http://3.7.126.228:4000/api/
-  
+export const GET_JOB = 'http://77.37.47.144:4200/api/frontend/job';
+ 
 
-  //job api
-
-  export const GET_JOB = API_BASE_URL + 'job' ;
-
-
- export const JOB_TOKEN = `Bearer 73dbba824ffcd243a02794ada26d566eea7f7461515212a6bc3ae87873f5221e` ;
-
- export const Job_token = `73dbba824ffcd243a02794ada26d566eea7f7461515212a6bc3ae87873f5221e`;
   
   
   export const STORAGE = {
@@ -364,11 +357,16 @@ export const jobData = [
 
    export const userDetail = localStorage?.getItem(STORAGE?.userDetail) ? JSON.parse(localStorage?.getItem(STORAGE?.userDetail)) : {}
 
+//   export const headers  = {
+//     headers:{
+    
+//     }
+//   }
+
+  
   export const headers  = {
     headers:{
     // 'token': userDetail?.token ? `Bearer  ${userDetail?.token}` : 'essentials',
         'token': 'Bearer 345af9173b2e189bb85ca038acd993b004826984d9b3e316bcc0085ce2cb2c6c'
     }
   }
-
-  
