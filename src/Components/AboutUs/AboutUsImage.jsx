@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Col, Row } from 'reactstrap';
 import aboutUs1 from '../../../public/assets/images/aboutUs.png';
 import aboutUs2 from '../../../public/assets/images/aboutUs.png';
+
 const AboutUsImage = () => {
   return (
     <Col xl='6' xs='12'>

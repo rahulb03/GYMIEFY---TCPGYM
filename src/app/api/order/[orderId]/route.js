@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import order from '../order.json'
+import order from '../order.json';
+
 export async function GET(_, { params }) {
     const orderId = params.orderId
 

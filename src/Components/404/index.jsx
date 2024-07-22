@@ -8,6 +8,7 @@ import NotFoundImage from '../../../public/assets/images/inner-page/404.png';
 import Btn from '@/Elements/Buttons/Btn';
 import ThemeOptionContext from '@/Helper/ThemeOptionsContext';
 import { useRouter } from 'next/navigation';
+
 const NotFoundComponent = () => {
   const { themeOption } = useContext(ThemeOptionContext);
   const router = useRouter();

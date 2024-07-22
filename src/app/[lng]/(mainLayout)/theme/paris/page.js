@@ -1,4 +1,5 @@
-import ParisTheme from '@/Components/ParisTheme'
+import ParisTheme from '@/Components/ParisTheme';
+
 const Paris = () => {
     return <ParisTheme />
 }

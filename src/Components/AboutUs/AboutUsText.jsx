@@ -4,6 +4,7 @@ import { deliveryData } from '../../../Data/AboutUsData';
 import I18NextContext from '@/Helper/I18NextContext';
 import { useTranslation } from '@/app/i18n/client';
 import { useContext } from 'react';
+
 const AboutUsText = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');

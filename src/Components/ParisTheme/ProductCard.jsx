@@ -14,6 +14,7 @@ import { categorySliderOption, featureBlogSliderOption } from '../../../Data/Sli
 import { LeafSVG } from '../Common/CommonSVG';
 import ProductIdsContext from '@/Helper/ProductIdsContext';
 import { productData } from '@/Config/Constant';
+
 const ProductCard = ({ dataAPI }) => {
   // const { filteredProduct } = useContext(ProductIdsContext);
   const { filteredProduct } = productData;

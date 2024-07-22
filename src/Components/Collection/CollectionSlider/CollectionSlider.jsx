@@ -10,6 +10,7 @@ import { useTranslation } from '@/app/i18n/client';
 import { usePathname, useRouter } from 'next/navigation';
 import { useCustomSearchParams } from '@/Utils/Hooks/useCustomSearchParams';
 import { ASSETS_URL, categoryData } from '@/Config/Constant';
+
 const CollectionSlider = ({ filter, setFilter }) => {
   const { i18Lang } = useContext(I18NextContext);
   const [attribute, price, rating, sortBy, field, layout] = useCustomSearchParams(['attribute', 'price', 'rating', 'sortBy', 'field', 'layout']);

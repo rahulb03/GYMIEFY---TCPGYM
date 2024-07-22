@@ -21,7 +21,7 @@ export const sliderData = [
 
 // dummy banner data
 export const bannerData = [
-    'images/banner/banner-1.png',
+    '/images/banner/banner-1.png',
     'images/banner/banner-2.png',
 ]
 
@@ -30,7 +30,7 @@ export const productData = [
     {
         id:1,
         productName:'this is first product',
-        productThumbnail:'images/product/product-1.png',
+        productThumbnail:'/images/product/product-1.png',
         productMrp:2000,
         productPrice:1600,
         productDiscount:'20%',
@@ -44,7 +44,7 @@ export const productData = [
     {
         id:2,
         productName:'this is second product',
-        productThumbnail:'images/product/product-2.png',
+        productThumbnail:'/images/product/product-2.png',
         productMrp:2500,
         productPrice:2000,
         productDiscount:'20%',
@@ -58,7 +58,8 @@ export const productData = [
     {
         id:3,
         productName:'this is third product',
-        productThumbnail:'images/product/product-3.png',
+        // productThumbnail:'images/product/product-3.png',
+        productThumbnail:'/images/product/product-3.png',
         productMrp:1500,
         productPrice:1350,
         productDiscount:'10%',
@@ -72,7 +73,7 @@ export const productData = [
     {
         id:4,
         productName:'this is fourth product',
-        productThumbnail:'images/product/product-4.png',
+        productThumbnail:'/images/product/product-4.png',
         productMrp:2500,
         productPrice:2500,
         productDiscount:'0',
@@ -86,7 +87,7 @@ export const productData = [
     {
         id:5,
         productName:'this is fifth product',
-        productThumbnail:'images/product/product-5.png',
+        productThumbnail:'/images/product/product-5.png',
         productMrp:1000,
         productPrice:750,
         productDiscount:'25%',
@@ -100,7 +101,7 @@ export const productData = [
     {
         id:6,
         productName:'this is sixth product',
-        productThumbnail:'images/product/product-6.png',
+        productThumbnail:'/images/product/product-6.png',
         productMrp:1200,
         productPrice:600,
         productDiscount:'50%',
@@ -114,7 +115,7 @@ export const productData = [
     {
         id:7,
         productName:'this is seventh product',
-        productThumbnail:'images/product/product-7.png',
+        productThumbnail:'/images/product/product-7.png',
         productMrp:1530,
         productPrice:1530,
         productDiscount:'0',
@@ -132,7 +133,7 @@ export const productData2 = [
     {
         id:8,
         productName:'BUILD. PROWL Advanced Series Multi Blend Whey Chocolate Flavor (1.75 kg) | 24 gms',
-        productThumbnail:'images/product/product-8.png',
+        productThumbnail:'/images/product/product-8.png',
         productMrp:2000,
         productPrice:1600,
         productDiscount:'20%',
@@ -146,7 +147,7 @@ export const productData2 = [
     {
         id:9,
         productName:'BON PURE WHEY | 1 Kg, 28 Servings Belgian Chocolate|The HOLISTIC WHEY PROTEIN',
-        productThumbnail:'images/product/product-9.png',
+        productThumbnail:'/images/product/product-9.png',
         productMrp:2500,
         productPrice:2000,
         productDiscount:'20%',
@@ -160,7 +161,7 @@ export const productData2 = [
     {
         id:10,
         productName:'BUILD. PROWL Elite Series Lean Muscle Enhancer – Roasted Coffee Flavor (2 kgs)',
-        productThumbnail:'images/product/product-10.png',
+        productThumbnail:'/images/product/product-10.png',
         productMrp:1500,
         productPrice:1350,
         productDiscount:'10%',
@@ -174,7 +175,7 @@ export const productData2 = [
     {
         id:11,
         productName:'OPTIMUM NUTRITION Performance Whey Protein Powder Blend with Isolate, 24g Protein, 5g BCAA, Chocolate, 1 kg',
-        productThumbnail:'images/product/product-11.png',
+        productThumbnail:'/images/product/product-11.png',
         productMrp:2500,
         productPrice:2500,
         productDiscount:'0',
@@ -188,7 +189,7 @@ export const productData2 = [
     {
         id:12,
         productName:'AVVATAR ISORICH WHEY PROTEIN | 1Kg | Malai Kulfi Flavour | 29g Protein | 29 Servings | Isolate',
-        productThumbnail:'images/product/product-12.png',
+        productThumbnail:'/images/product/product-12.png',
         productMrp:1000,
         productPrice:750,
         productDiscount:'25%',
@@ -202,7 +203,7 @@ export const productData2 = [
     {
         id:13,
         productName:'NAKPRO Platinum Whey Protein Isolate | 28g Protein, 6.36g BCAA | Easy Mixing, Low Carbs, Easy Digesting Whey Protein Supplement Powder (1 Kg, Chocolate)',
-        productThumbnail:'images/product/product-13.png',
+        productThumbnail:'/images/product/product-13.png',
         productMrp:2100,
         productPrice:1680,
         productDiscount:'20%',
@@ -220,27 +221,27 @@ export const categoryData = [
     {
         id:1,
         categoryName:'accessories',
-        categoryThumbnail:'images/category/accessorise.png',
+        categoryThumbnail:'/images/category/accessorise.png',
     },
     {
         id:2,
         categoryName:'equipments',
-        categoryThumbnail:'images/category/equipments.png',
+        categoryThumbnail:'/images/category/equipments.png',
     },
     {
         id:3,
         categoryName:'institutes',
-        categoryThumbnail:'images/category/institutes.png',
+        categoryThumbnail:'/images/category/institutes.png',
     },
     {
         id:4,
         categoryName:'supplement',
-        categoryThumbnail:'images/category/supplement.png',
+        categoryThumbnail:'/images/category/supplement.png',
     },
     {
         id:5,
         categoryName:'trainees',
-        categoryThumbnail:'images/category/trainees.png',
+        categoryThumbnail:'/images/category/trainees.png',
     },
 ]
 

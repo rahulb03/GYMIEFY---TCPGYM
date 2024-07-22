@@ -9,6 +9,7 @@ import { teamMembersData } from '../../../Data/AboutUsData';
 import { creativeTeamSlider } from '../../../Data/SliderSettingsData';
 import I18NextContext from '@/Helper/I18NextContext';
 import { useTranslation } from '@/app/i18n/client';
+
 const CreativeTeam = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
