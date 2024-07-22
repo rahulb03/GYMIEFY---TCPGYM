@@ -35,12 +35,12 @@ module.exports = (phase) => {
         ];
     }
     const images = {
-        domains: ["react.pixelstrap.net", "brainstuck.in"],
+        domains: ["react.pixelstrap.net", ""],
         remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "brainstuck.in",
-            },
+            // {
+            //     protocol: "https",
+            //     hostname: "brainstuck.in",
+            // },
             {
                 protocol: "https",
                 hostname: "react.pixelstrap.net",
