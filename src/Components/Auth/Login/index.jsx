@@ -19,6 +19,8 @@ const LoginContent = () => {
     <>
       <Breadcrumb title={'Login'} subNavigation={[{ name: 'Login' }]} />
       <WrapperComponent classes={{ sectionClass: 'log-in-section background-image-2 section-b-space', fluidClass: 'w-100' }} customCol={true}>
+       {/* <Image src="/public/assets/images/category/accessorise.png" alt="alt" width={400} height={200} /> */}
+       
         <Col xxl={6} xl={5} lg={6} className='d-lg-block d-none ms-auto'>
           <div className='image-contain'>
             <Image src={loginImage} className='img-fluid' alt='loginImage' height={465} width={550} />
@@ -40,13 +42,16 @@ const LoginContent = () => {
             <div className='sign-up-box'>
               <h4>{t("Don'thaveanaccount")}?</h4>
               <Link href={`/${i18Lang}/auth/register`}>{t('SignUp')}</Link>
-              <Link href={`/${i18Lang}/Admin/User`}> click me</Link>
+              {/* <Link href={`/${i18Lang}/Admin/User`}> click me</Link> */}
 
             </div>
           </div>
         </Col>
       </WrapperComponent>
       {/* <button href='/src/Components/Admin/User'> click me</button> */}
+
+      {/* <Image src="/public/assets/images/category/accessorise.png" alt="alt" width={400} height={200} /> */}
+
     </>
   );
 };

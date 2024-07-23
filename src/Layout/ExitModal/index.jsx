@@ -42,7 +42,8 @@ const ExitModal = () => {
   };
 
   return (
-    <CustomModal modal={showModal} setModal={setShowModal} classes={{ customChildren: true, modalClass: "modal-lg newsletter-modal theme-modal" }}>
+    <>
+    {/* <CustomModal modal={showModal} setModal={setShowModal} classes={{ customChildren: true, modalClass: "modal-lg newsletter-modal theme-modal" }}>
       <ModalHeader className="p-0" toggle={closeModal} />
       <div className="modal-box">
         <div className="modal-image">
@@ -60,7 +61,8 @@ const ExitModal = () => {
           </div>
         </div>
       </div>
-    </CustomModal>
+    </CustomModal> */}
+    </>
   );
 };
 

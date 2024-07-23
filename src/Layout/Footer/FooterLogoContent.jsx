@@ -13,6 +13,8 @@ import RomeLogo from '../../../public/assets/images/logo/3.png';
 import MadridLogo from '../../../public/assets/images/logo/4.png';
 import OtherLogo from '../../../public/assets/images/logo/6.png';
 import { EMAIL_ADD, LIGHT_LOGO, MAP } from '@/Config/Constant';
+import gymiefy from '../../../public/assets/images/Gym.png';
+import Image from 'next/image';
 
 const FooterLogoContent = () => {
   const { themeOption } = useContext(ThemeOptionContext);
@@ -38,9 +40,12 @@ const FooterLogoContent = () => {
   }, [pathName, i18Lang, themeOption?.logo?.footer_logo]);
   return (
     <Col xl={3} sm={6}>
+
+
+      {/* <Image src="/public/assets/images/country/arabic.png" alt="alt" width={24} height={54} /> */}
       <div className='footer-logo'>
         <div className='theme-logo'>
-          <Link href='/'><Avatar data={LIGHT_LOGO} placeHolder={placeHolderImage} name={'Footer'} height={28} width={160} /></Link>
+          <Link href='/'><Image src={gymiefy}  name={'Footer'} height={28} width={160}  alt= "footer" /></Link>
         </div>
 
         <div className='footer-logo-contain'>

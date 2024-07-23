@@ -417,59 +417,208 @@
 
 
 
-'use client'
-import { useEffect, useContext, useState, useRef } from 'react';
-import { RiArrowRightLine, RiSearchLine } from 'react-icons/ri';
-import { Card, CardBody, CardFooter, InputGroup, Input, Button, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, FormGroup, Label, Input as RadioInput } from 'reactstrap';
+// 'use client'
+// import { useEffect, useContext, useState, useRef } from 'react';
+// import { RiArrowRightLine, RiSearchLine } from 'react-icons/ri';
+// import { Card, CardBody, CardFooter, InputGroup, Input, Button, Container, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, FormGroup, Label, Input as RadioInput } from 'reactstrap';
 // import I18NextContext from '@/Helper/I18NextContext';
 // import { useTranslation } from '@/app/i18n/client';
-import { ASSETS_URL , GET_JOB } from '@/Config/Constant';
-import RatioImage from '@/Utils/RatioImage';
+// import { GET_JOB } from '@/Config/Constant';
+
+// import axios from 'axios';
+// import  './job.css';
+// import Image from 'next/image';
+
+
+// const BrowserJob = () => {
+//   const { i18Lang } = useContext(I18NextContext);
+//   const { t } = useTranslation(i18Lang, 'common');
+//   const [jobs, setJobs] = useState([]);
+
+//   useEffect(() => {
+//     const fetchJobData = async () => {
+//       try {
+//         const response = await axios.put( GET_JOB , {}, {
+//           headers: {
+//             'token': 'essentials',
+//             'Content-Type': 'application/json'
+//           }
+//         });
+//         if (response.data.message === "Data Found") {
+//           setJobs(response.data.data); // assuming response.data.data is an array
+//         }
+//       } catch (error) {
+//         console.error("Error fetching job data:", error);
+//       }
+//     };
+
+//     fetchJobData();
+//   }, []);
+
+//   if (!jobs.length) {
+//     return <p>Loading...</p>;
+//   }
+
+//   return (
+//     <> 
+
+//         <section className='faq-box-contain section-b-space'>
+//           <Container>
+//             <div className='job-grid'>
+//             {jobs.map((job, index) => (
+//                 <Card className='h-100 p-0 job-card' key={index}>
+//                   <CardBody className='p-2 d-flex flex-column'>
+//                     <div className='d-flex job-image'>
+//                       <Image
+//                         src = ''
+//                         // src = {ASSETS_URL}
+//                         height={90}
+//                         width={90}
+//                         className="rounded"
+//                         alt=''
+//                       />
+//                       <div className='job-post'>
+//                         <h3>{job.name}</h3>
+//                         <h6>{job.shortDescription}</h6>
+//                       </div>
+//                     </div>
+//                     <div className='job-details'>
+//                       <div className='d-flex gap-2'>
+//                         <span>Experience:</span>
+//                         <span>{job.experience} years</span>
+//                       </div>
+//                       <div className='d-flex gap-2'>
+//                         <span>Salary:</span>
+//                         <span>{job.salary}</span>
+//                       </div>
+
+//                       <div className='d-flex gap-2'>
+//                         <span>Mode:</span>
+//                         <span>{job.mode}</span>
+//                       </div>
+                     
+//                       <div className='d-flex gap-2'>
+//                         <span>Location:</span>
+//                         <span>{job.location}</span>
+//                       </div>
+
+//                     </div>
+//                   </CardBody>
+//                   <CardFooter className='p-2 d-flex justify-content-between align-items-center card-footer'>
+//                     <h6>Posted: {job.CreatedAt}</h6>
+//                     <RiArrowRightLine fontSize={25} />
+//                   </CardFooter>
+//                 </Card>
+//               ))}
+//             </div>          
+//           </Container>
+//         </section>
+
+
+//     </>
+//   );
+// };
+
+
+// export default BrowserJob;
+
+
+
+'use client'
+import { useEffect, useContext, useState } from 'react';
+import { RiArrowRightLine } from 'react-icons/ri';
+import { Card, CardBody, CardFooter, Container } from 'reactstrap';
+import I18NextContext from '@/Helper/I18NextContext';
+import { useTranslation } from '@/app/i18n/client';
+import { GET_JOB } from '@/Config/Constant';
 import axios from 'axios';
-import  './job.css';
+import './job.css';
 import Image from 'next/image';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 const BrowserJob = () => {
+  const { i18Lang } = useContext(I18NextContext);
+  const { t } = useTranslation(i18Lang, 'common');
   const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchJobData = async () => {
       try {
-        const response = await axios.put( GET_JOB , {}, {
+        const response = await axios.put(GET_JOB, {}, {
           headers: {
             'token': 'essentials',
-            'Content-Type': 'application/json'
-          }
+            'Content-Type': 'application/json',
+          },
         });
         if (response.data.message === "Data Found") {
           setJobs(response.data.data); // assuming response.data.data is an array
         }
       } catch (error) {
         console.error("Error fetching job data:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchJobData();
   }, []);
 
-  if (!jobs.length) {
-    return <p>Loading...</p>;
-  }
+  const renderSkeleton = () => (
+    <Card className='h-100 p-0 job-card'>
+      <CardBody className='p-2 d-flex flex-column'>
+        <div className='d-flex job-image'>
+          <Skeleton height={90} width={90} circle={true} />
+          <div className='job-post'>
+            <h3><Skeleton width={120} /></h3>
+            <h6><Skeleton width={200} /></h6>
+          </div>
+        </div>
+        <div className='job-details'>
+          <div className='d-flex gap-2'>
+            <span>Experience:</span>
+            <Skeleton width={60} />
+          </div>
+          <div className='d-flex gap-2'>
+            <span>Salary:</span>
+            <Skeleton width={60} />
+          </div>
+          <div className='d-flex gap-2'>
+            <span>Mode:</span>
+            <Skeleton width={60} />
+          </div>
+          <div className='d-flex gap-2'>
+            <span>Location:</span>
+            <Skeleton width={60} />
+          </div>
+        </div>
+      </CardBody>
+      <CardFooter className='p-2 d-flex justify-content-between align-items-center card-footer'>
+        <h6>Posted: <Skeleton width={80} /></h6>
+        <RiArrowRightLine fontSize={25} />
+      </CardFooter>
+    </Card>
+  );
 
   return (
-    <>
-        <section className='faq-box-contain section-b-space'>
-          <Container>
-            <div className='job-grid'>
-            {jobs.map((job, index) => (
+    <> 
+      <section className='faq-box-contain section-b-space'>
+        <Container>
+          <div className='job-grid'>
+            {loading ? (
+              Array.from({ length: 5 }).map((_, index) => renderSkeleton())
+            ) : (
+              jobs.map((job, index) => (
                 <Card className='h-100 p-0 job-card' key={index}>
                   <CardBody className='p-2 d-flex flex-column'>
                     <div className='d-flex job-image'>
                       <Image
-                        src = '/assets/images/about-avatar.png'
-                        // src = {ASSETS_URL}
+                        src=''
                         height={90}
                         width={90}
                         className="rounded"
+                        alt=''
                       />
                       <div className='job-post'>
                         <h3>{job.name}</h3>
@@ -485,17 +634,14 @@ const BrowserJob = () => {
                         <span>Salary:</span>
                         <span>{job.salary}</span>
                       </div>
-
                       <div className='d-flex gap-2'>
                         <span>Mode:</span>
                         <span>{job.mode}</span>
                       </div>
-                     
                       <div className='d-flex gap-2'>
                         <span>Location:</span>
                         <span>{job.location}</span>
                       </div>
-
                     </div>
                   </CardBody>
                   <CardFooter className='p-2 d-flex justify-content-between align-items-center card-footer'>
@@ -503,15 +649,13 @@ const BrowserJob = () => {
                     <RiArrowRightLine fontSize={25} />
                   </CardFooter>
                 </Card>
-              ))}
-            </div>
-          
-          </Container>
-        </section>
+              ))
+            )}
+          </div>
+        </Container>
+      </section>
     </>
   );
 };
 
-
 export default BrowserJob;
-

@@ -15,6 +15,8 @@ import RomeLogo from '../../../../public/assets/images/logo/3.png';
 import MadridLogo from '../../../../public/assets/images/logo/4.png';
 import OtherLogo from '../../../../public/assets/images/logo/6.png';
 import { DARK_LOGO } from '@/Config/Constant';
+import Image from 'next/image';
+import gymiefy from '../../../../public/assets/images/Gy2mify.png';
 
 const HeaderLogo = () => {
   const [logo, setLogo] = useState('');
@@ -47,7 +49,7 @@ const HeaderLogo = () => {
         </span>
       </Btn>
       <Link href='/' className='web-logo nav-logo'>
-        <Avatar data={DARK_LOGO} placeHolder={logoImage} name={'Header'} customImageClass={'img-fluid'} height={28} width={162} />
+        <Image src={gymiefy} alt="alt"  placeHolder={logoImage} name={'Header'} customImageClass={'img-fluid'} height={28} width={162} />
       </Link>
     </>
   );

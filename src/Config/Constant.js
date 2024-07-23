@@ -3,7 +3,7 @@ export const API_URL = '';
 // export const ASSETS_URL = 'https://brainstuck.in/techsamrajya/gym/assets/';
 export const ASSETS_URL = '';
 
-
+import product1 from '../../public/assets/images/category/beverage.jpg';
 export const SITE_NAME = 'TCP GYM'
 export const MOBILE_NO = '09925242423';
 export const EMAIL_ADD = 'support@tcpgym.com';
@@ -30,7 +30,7 @@ export const productData = [
     {
         id:1,
         productName:'this is first product',
-        productThumbnail:'/images/product/product-1.png',
+        productThumbnail: '/public/assets/images/category/accessorise.png',
         productMrp:2000,
         productPrice:1600,
         productDiscount:'20%',
@@ -221,7 +221,7 @@ export const categoryData = [
     {
         id:1,
         categoryName:'accessories',
-        categoryThumbnail:'/images/category/accessorise.png',
+        categoryThumbnail:'/public/assets/images/category/accessorise.png',
     },
     {
         id:2,

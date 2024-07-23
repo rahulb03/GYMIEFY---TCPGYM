@@ -6,48 +6,48 @@ import institutes from '../public/assets/images/category/institutes.png';
 import commingSoon from '../public/assets/images/themes/08.jpg';
 
 export const headerMenu = [
-  {
-    id: 1,
-    title: 'All Products',
-    styleType: 'image',
-    customChildren: true,
-    children: [
-      {
-        title: 'supplements',
-        path: '/theme/paris',
-        image: supplement,
-      },
-      {
-        title: 'equipments',
-        path: '/theme/paris',
-        image: equipments,
-      },
-      {
-        title: 'accessorise',
-        path: '/theme/paris',
-        image: accessorise,
-      },
-      {
-        title: 'trainees',
-        path: '/theme/paris',
-        image: trainees,
-      },
-      {
-        title: 'institutes',
-        path: '/theme/paris',
-        image: institutes,
-      },
-      {
-        title: '',
-        path: '',
-        image: commingSoon,
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'Collection',
-  },
+  // {
+  //   id: 1,
+  //   title: 'All Products',
+  //   styleType: 'image',
+  //   customChildren: true,
+  //   children: [
+  //     {
+  //       title: 'supplements',
+  //       path: '/theme/paris',
+  //       image: supplement,
+  //     },
+  //     {
+  //       title: 'equipments',
+  //       path: '/theme/paris',
+  //       image: equipments,
+  //     },
+  //     {
+  //       title: 'accessorise',
+  //       path: '/theme/paris',
+  //       image: accessorise,
+  //     },
+  //     {
+  //       title: 'trainees',
+  //       path: '/theme/paris',
+  //       image: trainees,
+  //     },
+  //     {
+  //       title: 'institutes',
+  //       path: '/theme/paris',
+  //       image: institutes,
+  //     },
+  //     {
+  //       title: '',
+  //       path: '',
+  //       image: commingSoon,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 2,
+  //   title: 'Collection',
+  // },
   {
     id:3,
     title:'Job',
