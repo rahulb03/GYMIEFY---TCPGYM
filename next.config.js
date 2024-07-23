@@ -24,7 +24,7 @@ module.exports = (phase) => {
             if (isStaging) return 'http://localhost:3000/api/'
             return 'RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)'
         })(),
-        API_BASE_URL: "http://localhost:3000/api/",
+        API_BASE_URL: 'http://77.37.47.144:4200/api/frontend/',
     }
     const redirects = () => {
         return [
