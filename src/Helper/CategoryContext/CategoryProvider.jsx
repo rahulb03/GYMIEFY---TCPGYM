@@ -6,7 +6,7 @@ import CategoryContext from '.';
 
 const CategoryProvider = (props) => {
   const [categoryAPIData, setCategoryAPIData] = useState({ data: [], refetchCategory: '', params: {}, categoryIsLoading: false });
-  const { data: categoryData, isLoading: categoryIsLoading } = useQuery([CategoryAPI], () => request({ url: CategoryAPI, params: { ...categoryAPIData.params, status: 1 } }), {
+  const { data: categoryData, isLoading: categoryIsLoading } = useQuery([CategoryAPI], () => request({ url: '', params: { ...categoryAPIData.params, status: 1 } }), {
     enabled: true,
     refetchOnWindowFocus: false,
     select: (data) => data.data.data,

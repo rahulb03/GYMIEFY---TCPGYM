@@ -12,7 +12,7 @@ const CompareProvider = (props) => {
     data: CompareData,
     isLoading: getCompareLoading,
     refetch,
-  } = useQuery([CompareAPI], () => request({ url: CompareAPI }), { enabled: false, refetchOnWindowFocus: false, select: (res) => res?.data?.data });
+  } = useQuery([CompareAPI], () => request({ url: '' }), { enabled: false, refetchOnWindowFocus: false, select: (res) => res?.data?.data });
   useEffect(() => {
     if (cookieUAT) {
       refetch();

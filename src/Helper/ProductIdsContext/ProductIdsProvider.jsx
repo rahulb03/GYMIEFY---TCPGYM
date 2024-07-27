@@ -7,7 +7,7 @@ import request from '@/Utils/AxiosUtils';
 const ProductIdsProvider = (props) => {
   const [getProductIds, setGetProductIds] = useState({});
   const [filteredProduct, setFilteredProduct] = useState([]);
-  const { data, refetch, isLoading } = useQuery([ProductAPI, getProductIds?.ids], () => request({ url: ProductAPI, params: { ...getProductIds, status: 1 } }), {
+  const { data, refetch, isLoading } = useQuery([ProductAPI, getProductIds?.ids], () => request({ url: '', params: { ...getProductIds, status: 1 } }), {
     enabled: false,
     refetchOnWindowFocus: false,
     select: (data) => data.data,
