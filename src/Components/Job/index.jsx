@@ -1272,7 +1272,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { TbSearch } from "react-icons/tb";
 import { HiOutlineSearch } from "react-icons/hi";
-
+// import mysvg from '../../../public/magnifying-glass-search.svg';
+import mysvg from "../../../public/pin.svg";
+// import svg from '../../../public/pin.svg;'
 const BrowserJob = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
@@ -1408,13 +1410,12 @@ const BrowserJob = () => {
 
   return (
     <>
-      <form 
-        className="d-flex align-items-center search" 
+      <form
+        className="d-flex align-items-center search"
         style={{ maxWidth: '630px', margin: '0 auto' }}
         onSubmit={handleSubmit}
       >
-        <FaSearch style={{marginLeft:'10px' ,marginTop:'50px;' , size:'200px' , fontWeight:"20px"}} />
-        {/* <HiOutlineSearch /> */}
+        <FaSearch style={{ marginLeft: '10px', fontSize: '16px', fontWeight: 'bold' }} />
         <div className="position-relative w-50">
           <input 
             type="text" 
