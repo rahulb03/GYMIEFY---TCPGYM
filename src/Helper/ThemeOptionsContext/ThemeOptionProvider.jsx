@@ -11,7 +11,7 @@ const ThemeOptionProvider = (props) => {
   const [mobileSideBar, setMobileSideBar] = useState(false);
   const [collectionMobile, setCollectionMobile] = useState(false);
   const [themeOption, setThemeOption] = useState({});
-  const { data, isLoading, refetch } = useQuery([ThemeOptionsAPI], () => request({ url: ThemeOptionsAPI }), {
+  const { data, isLoading, refetch } = useQuery([ThemeOptionsAPI], () => request({ url: '' }), {
     enabled: false,
     refetchOnWindowFocus: false,
     select: (res) => res?.data,
