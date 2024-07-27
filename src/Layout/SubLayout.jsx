@@ -33,7 +33,7 @@ const SubLayout = ({ children }) => {
       //   themeOption?.general?.site_title && themeOption?.general?.site_tagline
       //     ? `${themeOption?.general?.site_title} | ${themeOption?.general?.site_tagline}`
       //     : 'TCP GYM: ';
-      let value = 'TCP GYM: ';
+      let value = 'GYMIEFY ';
       document.title = value;
       clearTimeout(timer);
     }

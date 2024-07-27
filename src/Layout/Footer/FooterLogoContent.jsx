@@ -13,7 +13,7 @@ import RomeLogo from '../../../public/assets/images/logo/3.png';
 import MadridLogo from '../../../public/assets/images/logo/4.png';
 import OtherLogo from '../../../public/assets/images/logo/6.png';
 import { EMAIL_ADD, LIGHT_LOGO, MAP } from '@/Config/Constant';
-import gymiefy from '../../../public/assets/images/Gym.png';
+import gymiefy from '../../../public/assets/images/Gym2.png';
 import Image from 'next/image';
 
 const FooterLogoContent = () => {

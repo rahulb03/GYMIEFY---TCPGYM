@@ -22,6 +22,9 @@ const HeaderCategory = ({ customClass, icon, dropDownClass }) => {
     return categoryData?.filter((elem) => themeOption?.header?.category_ids?.includes(elem.id));
   });
   return (
+
+    <>
+    <div >
     <Col xs={12}>
       <div className={`${customClass ? customClass : 'header-nav'}`}>
         <div className='header-nav-left d-none'>
@@ -55,6 +58,8 @@ const HeaderCategory = ({ customClass, icon, dropDownClass }) => {
         <TodaysDeal />
       </div>
     </Col>
+    </div>
+    </>
   );
 };
 

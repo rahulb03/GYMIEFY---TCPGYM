@@ -7,6 +7,7 @@ import HeaderLogo from './Common/HeaderLogo';
 import HeaderSearchBar from './Common/HeaderSearchBar';
 import HeaderTopBar from './Common/HeaderTopBar';
 import RightSideHeader from './RightSideHeader';
+import MainHeaderMenu from './Common/MainHeaderMenu';
 
 const BasicHeader = () => {
   const { themeOption } = useContext(ThemeOptionContext);
@@ -18,10 +19,13 @@ const BasicHeader = () => {
         <div className='container-fluid-lg'>
           <Row>
             <Col xs='12'>
-              <div className='navbar-top'>
+              <div className='navbar-top '>
                 <HeaderLogo />
 
-                <HeaderSearchBar />
+             {/* <MainHeaderMenu />   */}
+                {/* <HeaderSearchBar /> */}
+          <HeaderCategory />
+
 
                 <RightSideHeader />
               </div>
@@ -32,7 +36,8 @@ const BasicHeader = () => {
 
       <div className='container-fluid-lg bg-white'>
         <Row>
-          <HeaderCategory />
+          {/* <HeaderCategory /> */}
+          
         </Row>
       </div>
     </header>

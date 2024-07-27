@@ -17,8 +17,11 @@ import OtherLogo from '../../../../public/assets/images/logo/6.png';
 import { DARK_LOGO } from '@/Config/Constant';
 import Image from 'next/image';
 import gymiefy from '../../../../public/assets/images/Gy2mify.png';
+import { RiCloseLine } from 'react-icons/ri';
+import MainHeaderMenu from './MainHeaderMenu';
 
 const HeaderLogo = () => {
+  
   const [logo, setLogo] = useState('');
   const { themeOption, mobileSideBar, setMobileSideBar } = useContext(ThemeOptionContext);
   const { i18Lang } = useContext(I18NextContext);
@@ -51,6 +54,26 @@ const HeaderLogo = () => {
       <Link href='/' className='web-logo nav-logo'>
         <Image src={gymiefy} alt="alt"  placeHolder={logoImage} name={'Header'} customImageClass={'img-fluid'} height={28} width={162} />
       </Link>
+
+        <div className=''> 
+                <div className='main-nav navbar navbar-expand-xl navbar-light navbar-sticky'>
+        <div className={`offcanvas offcanvas-collapse order-xl-2 ${mobileSideBar ? 'show' : ''}`} id='primaryMenu'>
+          <div className='offcanvas-header navbar-shadow'>
+            <h5>{t('Menu')}</h5>
+            <Btn className='btn-close lead' type='button' onClick={() => setMobileSideBar(!mobileSideBar)}>
+              <RiCloseLine/>
+            </Btn>
+          </div>
+          <div className='offcanvas-body'>
+            {/* <MainHeaderMenu /> */}
+
+              
+          </div>
+        </div>
+        {mobileSideBar && <div className={'offcanvas-backdrop fade show'} onClick={() => setMobileSideBar(!mobileSideBar)} />}
+      </div>
+    </div>
+      
     </>
   );
 };

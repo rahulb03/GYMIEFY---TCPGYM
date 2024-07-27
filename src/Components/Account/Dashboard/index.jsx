@@ -18,8 +18,9 @@ const AccountDashboard = () => {
           <div className='dashboard-right-sidebar'>
             <TabContent>
               <TabPane className='show active'>
-                <DashboardContent />
+                <DashboardContent /> 
                 <ProfilePassword />
+                {/* <ProfilePassword /> */}
               </TabPane>
             </TabContent>
           </div>

@@ -11,6 +11,7 @@ export const headerMenu = [
   //   title: 'All Products',
   //   styleType: 'image',
   //   customChildren: true,
+  
   //   children: [
   //     {
   //       title: 'supplements',
@@ -44,15 +45,24 @@ export const headerMenu = [
   //     },
   //   ],
   // },
-  // {
-  //   id: 2,
-  //   title: 'Collection',
-  // },
   {
-    id:3,
+    id:2,
     title:'Job',
     path:'/job'
-  }
+  },
+  {
+    id: 3,
+    title: 'trainer',
+  },
+  {
+    id: 4,
+    title: 'upcoming',
+  },
+  // {
+  //   id:4,
+  //   title:'Job',
+  //   path:'/job'
+  // }
   // {
   //   id: 3,
   //   title: 'Product',

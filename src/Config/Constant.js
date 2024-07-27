@@ -335,7 +335,7 @@ export const jobData = [
 
   export const LOGIN_API =  API_BASE_URL + 'auth/signin';
 
-  export const FORGOT_PASSWORD = API_BASE_URL + 'auth/changepassword';
+  export const CHANGE_PASSWORD = API_BASE_URL + 'auth/changepassword';
 
   export const UPDATE_PROFILE = API_BASE_URL + 'auth/profile' ;
 
@@ -367,7 +367,7 @@ export const GET_JOB = 'http://77.37.47.144:4200/api/frontend/job';
   
   export const headers  = {
     headers:{
-    // 'token': userDetail?.token ? `Bearer  ${userDetail?.token}` : 'essentials',
+   
         'token': 'Bearer 345af9173b2e189bb85ca038acd993b004826984d9b3e316bcc0085ce2cb2c6c'
     }
   }

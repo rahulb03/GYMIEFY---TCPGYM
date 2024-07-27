@@ -28,8 +28,8 @@ const RightSideHeader = ({ noContactUs, wishListIcon }) => {
           </div>
         </li>
         {!noContactUs && <HeaderContactUs />}
-        <HeaderWishList wishListIcon={wishListIcon} />
-        <HeaderCart />
+        {/* <HeaderWishList wishListIcon={wishListIcon} />
+        <HeaderCart /> */}
         <HeaderProfile />
       </ul>
       <div className={`bg-overlay  ${cartCanvas ? 'show' : ''}`} onClick={() => setCartCanvas((prev) => !prev)} />
