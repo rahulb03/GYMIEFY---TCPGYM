@@ -13,8 +13,8 @@ module.exports = (phase) => {
 
     const env = {
         API_PROD_URL: (() => {
-            // if (isDev) return 'http://77.37.47.144:4200/api/frontend/'
-            if (isDev) return 'http://localhost:3000/api/'
+            if (isDev) return 'http://77.37.47.144:4200/api/frontend/'
+            // if (isDev) return 'http://localhost:3000/api/'
             if (isProd) {
                 // Note: The code below needs to be uncommented, and you should use your domain where your API is hosted.
                 // return 'Enter Your URL here'
