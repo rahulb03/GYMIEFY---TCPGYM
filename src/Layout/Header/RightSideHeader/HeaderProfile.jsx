@@ -12,6 +12,8 @@ import AccountContext from "@/Helper/AccountContext";
 import Avatar from "@/Components/Common/Avatar";
 import Cookies from 'js-cookie';
 import { FaUser, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import { headers, SIGN_OUT, STORAGE } from "@/Config/Constant";
+import axios from "axios";
 
 const HeaderProfile = () => {
   const { i18Lang } = useContext(I18NextContext);
@@ -19,6 +21,7 @@ const HeaderProfile = () => {
   const router = useRouter();
   const [modal, setModal] = useState(false);
   const { t } = useTranslation(i18Lang, "common");
+  const userDetail = JSON.parse(localStorage?.getItem(STORAGE?.userDetail)?? '{}')
 
   const { mutate, isLoading } = useCreate(LogoutAPI, false, false, "Logout Successfully", () => {
     Cookies.remove('uat');
@@ -30,8 +33,15 @@ const HeaderProfile = () => {
     setModal(false);
   });
 
-  const handleLogout = () => {
-    mutate({});
+  const handleLogout = async () => {
+    const response = await axios?.get(SIGN_OUT, headers);
+    console.log('response logout :: ', response)
+    if (response?.status == 200) {
+      localStorage?.removeItem(STORAGE?.userDetail);
+      window.location.reload();
+    }
+
+    // mutate({});
   };
 
   // Memoize account-dependent JSX
@@ -81,14 +91,14 @@ const HeaderProfile = () => {
       </div>
       <div className="delivery-detail">
         <h6>
-          {t("Hi")}, {accountData?.name ?? t("User")}
+          {t("Hi")}, {userDetail?.name ?? t("User")}
         </h6>
         <h5>{t("MyAccount")}</h5>
       </div>
 
       <div className="onhover-div onhover-div-login">
         <ul className="user-box-name">
-          {accountData ? accountContent : nonAccountContent}
+          {userDetail?.name ? accountContent : nonAccountContent}
           <ConfirmationModal
             modal={modal}
             setModal={setModal}

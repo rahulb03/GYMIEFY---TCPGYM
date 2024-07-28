@@ -24,8 +24,6 @@
 
 
 
-
-
 /* utils */
 @import 'utils/variables';
 @import 'utils/mixin/animation';
@@ -155,3 +153,17 @@ body {
 }
 
 // style={{backgroundColor:'#a9a9a9' , border:"1px solid #ececec" , boxShadow:"0 8px 16px rgba(0, 0, 0, 0.2)"}}
+// our required themen color
+.bg-theme {
+  background-color: var(--theme-color)!important;
+}
+.theme-border, .border-theme {
+  border-color: var(--theme-color)!important;
+}
+.text-theme, .theme-text {
+  color: var(--theme-color)!important;
+}
+
+.font-weight-bold {
+  font-weight: 600!important;
+}

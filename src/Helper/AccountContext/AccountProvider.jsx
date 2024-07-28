@@ -94,8 +94,8 @@ const AccountProvider = (props) => {
 
   const clearSession = () => {
     Cookies.remove('uat');
-    Cookies.remove(STORAGE.userDetail);
-    localStorage.removeItem(STORAGE.userDetail);
+    // Cookies.remove(STORAGE.userDetail);
+    // localStorage.removeItem(STORAGE.usersDetail);
     setAccountData(null);
   };
 

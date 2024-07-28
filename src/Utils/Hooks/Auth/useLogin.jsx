@@ -114,7 +114,7 @@
 import { useMutation } from '@tanstack/react-query';
 import axios from 'axios';
 import { emailSchema, passwordSchema, YupObject } from '../../Validation/ValidationSchemas';
-import { LOGIN_API, STORAGE } from '@/Config/Constant';
+import { FRONTEND_BASE_URL, LOGIN_API, STORAGE } from '@/Config/Constant';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 import I18NextContext from '@/Helper/I18NextContext';
@@ -167,10 +167,20 @@ const useHandleLogin = () => {
         },
       }),
     {
-      onSuccess: (responseData) => {
-        handleLoginSuccess(responseData, router, i18Lang, refetch, compareRefetch, setAccountData);
-        const token = `Bearer ${responseData.data?.access_token}`;
-        setAuthToken(token); // Update axios headers with the token
+      onSuccess: (response) => {
+        console.log("login detail :: ", response)
+        if (response?.status == 200) {
+          const data = response?.data?.data;
+
+          localStorage?.setItem(STORAGE?.userDetail, JSON?.stringify(data))
+          window.location = FRONTEND_BASE_URL;
+          
+        }
+
+
+        // handleLoginSuccess(responseData, router, i18Lang, refetch, compareRefetch, setAccountData);
+        // const token = `Bearer ${responseData.data?.access_token}`;
+        // setAuthToken(token); // Update axios headers with the token
       },
       onError: (error) => {
         toast.error(error.response?.data?.message || 'An error occurred');

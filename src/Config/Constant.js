@@ -327,6 +327,7 @@ export const jobData = [
 
 
   export const API_BASE_URL = 'http://77.37.47.144:4200/api/frontend/'
+  export const FRONTEND_BASE_URL = window?.location?.hostname == 'gymiefy-tcpgym-g5c4.vercel.app' ? 'https://gymiefy-tcpgym-g5c4.vercel.app/' : 'http://localhost:3000/'
 
 
   //front end urls
@@ -348,7 +349,7 @@ export const jobData = [
 export const GET_JOB = 'http://77.37.47.144:4200/api/frontend/job';
  
 
-  
+  export const INR_LOG = `₹`
   
   export const STORAGE = {
         
@@ -368,6 +369,6 @@ export const GET_JOB = 'http://77.37.47.144:4200/api/frontend/job';
   export const headers  = {
     headers:{
    
-        'token': 'Bearer 345af9173b2e189bb85ca038acd993b004826984d9b3e316bcc0085ce2cb2c6c'
+        'token': userDetail?.token ? `Bearer ${userDetail?.token}` : 'essentials'
     }
   }

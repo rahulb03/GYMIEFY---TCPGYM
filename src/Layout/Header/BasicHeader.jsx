@@ -19,7 +19,7 @@ const BasicHeader = () => {
         <div className='container-fluid-lg'>
           <Row>
             <Col xs='12'>
-              <div className='navbar-top '>
+              <div className='navbar-top justify-content-between'>
                 <HeaderLogo />
 
              {/* <MainHeaderMenu />   */}

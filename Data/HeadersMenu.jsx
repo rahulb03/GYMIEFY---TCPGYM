@@ -52,7 +52,8 @@ export const headerMenu = [
   },
   {
     id: 3,
-    title: 'trainer',
+    title: 'Trainer',
+    path: '/trainer'
   },
   {
     id: 4,

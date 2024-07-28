@@ -20,6 +20,7 @@ const ProfileInformation = () => {
 
   const getProfileDetail = async () => {
     const response = await axios?.get(GET_PROFILE, headers);
+    console.log('response :: ', response?.data, response?.config)
     setAccountData(response.status == 200 ? { ...response.data.data } : {});
   };
 

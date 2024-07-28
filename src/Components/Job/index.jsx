@@ -1260,9 +1260,8 @@ import { RiArrowRightLine, RiCloseCircleLine } from 'react-icons/ri';
 import { Card, CardBody, CardFooter, Container } from 'reactstrap';
 import I18NextContext from '@/Helper/I18NextContext';
 import { useTranslation } from '@/app/i18n/client';
-import { GET_JOB } from '@/Config/Constant';
+import { GET_JOB, INR_LOG } from '@/Config/Constant';
 import axios from 'axios';
-import './job.css';
 import Image from 'next/image';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
@@ -1272,9 +1271,9 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { TbSearch } from "react-icons/tb";
 import { HiOutlineSearch } from "react-icons/hi";
-// import mysvg from '../../../public/magnifying-glass-search.svg';
-import mysvg from "../../../public/pin.svg";
-// import svg from '../../../public/pin.svg;'
+import './job.css';
+
+
 const BrowserJob = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
@@ -1350,8 +1349,9 @@ const BrowserJob = () => {
 
     const locations = predefinedLocations.filter(loc => loc.toLowerCase().includes(value.toLowerCase()));
     setSuggestions({ ...suggestions, locations: locations.length > 0 ? locations : [] });
-  };
+  }; 
 
+  
   const handleSuggestionClick = (type, value) => {
     if (type === 'jobTitle') {
       setJobTitleInput(value);
@@ -1448,8 +1448,9 @@ const BrowserJob = () => {
           )}
         </div>
 
-        <div className='divide' >
+        <div className='divide' > 
           </div>
+        
         <FaLocationDot style={{ color: '' }} />
         <div className="position-relative w-50">
           <input 
@@ -1492,7 +1493,9 @@ const BrowserJob = () => {
       </form>
 
      
-      <section className='faq-box-contain section-b-space'>
+    
+
+<section className='faq-box-contain section-b-space'>
         <Container>
           {noResults && (
             <div className="alert alert-warning" role="alert">
@@ -1504,43 +1507,63 @@ const BrowserJob = () => {
               Array.from({ length: 5 }).map((_, index) => renderSkeleton())
             ) : (
               filteredJobs.map((job, index) => (
-                <Card className='h-100 p-0 job-card' key={index}>
+                <Card
+                  className='h-100 p-0 job-card position-relative text-capitalize'
+                  key={index}
+                  onClick={() => router.push(`/job/${job.id}`)} // Navigate on card click
+                  style={{ cursor: 'pointer' }}
+                >
+                   <div className="position-absolute px-3 py-1 end-0 bg-theme text-white" style={{borderTopRightRadius:'inherit'}}>
+                      {job?.jobTypeName}
+                   </div>
                   <CardBody className='p-2 d-flex flex-column'>
+
+                    {/* <div className = "class-header"> 
+                       
+                       <span> {job.jobType.name}</span>
+
+                      </div> */}
                     <div className='d-flex job-image'>
                       <Image
                         src={jobimage}
                         height={90}
                         width={90}
-                        className="rounded"
+                        className="rounded img-thumbnail theme-border"
                         alt=''
                       />
                       <div className='job-post'>
                         <h3>{job.name}</h3>
                         <h6>{job.shortDescription}</h6>
                       </div>
+
+                      {/* <span className='class-header'>{job.jobType.name}</span> */}
+
+
                     </div>
                     <div className='job-details'>
                       <div className='d-flex gap-2'>
-                        <span>Experience:</span>
+                        <span className="font-weight-bold">Experience:</span>
                         <span>{job.experience} years</span>
                       </div>
                       <div className='d-flex gap-2'>
-                        <span>Salary:</span>
-                        <span>{job.salary}</span>
+                        <span className="font-weight-bold">Salary:</span>
+                        <span>{INR_LOG}{job.salary}</span>
                       </div>
                       <div className='d-flex gap-2'>
-                        <span>Mode:</span>
+                        <span className="font-weight-bold">Mode:</span>
                         <span>{job.mode}</span>
                       </div>
                       <div className='d-flex gap-2'>
-                        <span>Location:</span>
+                        <span className="font-weight-bold">Location:</span>
                         <span>{job.location}</span>
                       </div>
                     </div>
                   </CardBody>
-                  <CardFooter className='p-2 d-flex justify-content-between align-items-center card-footer'>
-                    <h6>Posted: {job.CreatedAt}</h6>
-                    <RiArrowRightLine fontSize={25} />
+                  <CardFooter className='py-3 d-flex justify-content-between align-items-center card-footer'>
+                      <span>Posted on: {job?.updatedAt}</span>
+                      <h5><b>Apply</b></h5>
+                    {/* <h6>Apply {job.CreatedAt}</h6> */}
+                    {/* <h6> {job.jobType.name} </h6> */}
                   </CardFooter>
                 </Card>
               ))
@@ -1548,6 +1571,7 @@ const BrowserJob = () => {
           </div>
         </Container>
       </section>
+
     </>
   );
 };
