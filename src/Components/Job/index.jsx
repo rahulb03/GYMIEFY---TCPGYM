@@ -798,11 +798,11 @@ const BrowserJob = () => {
                         height={90}
                         width={90}
                         className="rounded img-thumbnail theme-border"
-                        alt=''
+                        alt='loading'
                       />
                       <div className='job-post'>
-                        <h3>{job.name}</h3>
-                        <h6>{job.shortDescription}</h6>
+                        <h3>{job?.name}</h3>
+                        <h6>{job?.shortDescription}</h6>
                       </div>
 
                       {/* <span className='class-header'>{job.jobType.name}</span> */}
@@ -812,19 +812,19 @@ const BrowserJob = () => {
                     <div className='job-details'>
                       <div className='d-flex gap-2'>
                         <span className="font-weight-bold">Experience:</span>
-                        <span>{job.experience} years</span>
+                        <span>{job?.experience} years</span>
                       </div>
                       <div className='d-flex gap-2'>
                         <span className="font-weight-bold">Salary:</span>
-                        <span>{INR_LOG}{job.salary}</span>
+                        <span>{INR_LOG}{job?.salary}</span>
                       </div>
                       <div className='d-flex gap-2'>
                         <span className="font-weight-bold">Mode:</span>
-                        <span>{job.mode}</span>
+                        <span>{job?.mode}</span>
                       </div>
                       <div className='d-flex gap-2'>
                         <span className="font-weight-bold">Location:</span>
-                        <span>{job.location}</span>
+                        <span>{job?.location}</span>
                       </div>
                     </div>
                   </CardBody>
