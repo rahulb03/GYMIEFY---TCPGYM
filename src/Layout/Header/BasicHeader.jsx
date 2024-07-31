@@ -13,18 +13,17 @@ const BasicHeader = () => {
   const { themeOption } = useContext(ThemeOptionContext);
   const UpScroll = useHeaderScroll(false);
   return (
-    <header className={`pb-md-4 pb-0 ${themeOption?.header?.sticky_header_enable && UpScroll ? 'active' : ''}`}>
+    <header className={`pb-md-4 pb-0  ${themeOption?.header?.sticky_header_enable && UpScroll ? 'active' : ''}`}>
       {themeOption?.header?.page_top_bar_enable && <HeaderTopBar />}
-      <div className='top-nav top-header sticky-header'>
+       <div className='top-nav top-header sticky-header '>
         <div className='container-fluid-lg'>
           <Row>
             <Col xs='12'>
-              <div className='navbar-top justify-content-between'>
-                <HeaderLogo />
+              <div className='navbar-top justify-content-around'>
+                  <HeaderLogo />
 
-             {/* <MainHeaderMenu />   */}
-                {/* <HeaderSearchBar /> */}
-          <HeaderCategory />
+            
+                 <HeaderCategory />
 
 
                 <RightSideHeader />
@@ -32,7 +31,7 @@ const BasicHeader = () => {
             </Col>
           </Row>
         </div>
-      </div>
+      </div> 
 
       <div className='container-fluid-lg bg-white'>
         <Row>

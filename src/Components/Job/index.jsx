@@ -1423,8 +1423,10 @@ const BrowserJob = () => {
             placeholder="Job title, keywords " 
             aria-label="Job title, keywords, or company"
             style={{ borderTopRightRadius: '0', borderBottomRightRadius: '0' }}
-            value={jobTitleInput}
-            onChange={handleJobTitleChange}
+            value={jobTitleInput }
+            onChange={handleJobTitleChange }
+            // value={locationInput}
+            // onChange={handleLocationChange}
           />
           {jobTitleInput && (
             <IoMdClose
@@ -1508,9 +1510,9 @@ const BrowserJob = () => {
             ) : (
               filteredJobs.map((job, index) => (
                 <Card
-                  className='h-100 p-0 job-card position-relative text-capitalize'
+                  className='h-80 p-0 job-card position-relative text-capitalize'
                   key={index}
-                  onClick={() => router.push(`/job/${job.id}`)} // Navigate on card click
+                  // onClick={() => router.push(`/job/${job.id}`)} // Navigate on card click
                   style={{ cursor: 'pointer' }}
                 >
                    <div className="position-absolute px-3 py-1 end-0 bg-theme text-white" style={{borderTopRightRadius:'inherit'}}>
@@ -1518,11 +1520,7 @@ const BrowserJob = () => {
                    </div>
                   <CardBody className='p-2 d-flex flex-column'>
 
-                    {/* <div className = "class-header"> 
-                       
-                       <span> {job.jobType.name}</span>
-
-                      </div> */}
+                  
                     <div className='d-flex job-image'>
                       <Image
                         src={jobimage}

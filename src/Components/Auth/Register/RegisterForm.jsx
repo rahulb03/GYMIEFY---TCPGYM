@@ -317,7 +317,7 @@ const RegisterForm = () => {
     >
       {({ values, isSubmitting, handleChange, handleBlur }) => (
         <Form className='row g-md-4 g-3'>
-          <Col xs='12' className='form-group'>
+          <Col xs='12' className='form-group '>
             <SimpleInputField
               nameList={[
                 {

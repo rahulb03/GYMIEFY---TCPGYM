@@ -28,19 +28,14 @@ const ProfileInformation = () => {
     getProfileDetail();
   }, []);
 
-  const handleEditClick = () => {
-    router.push(`/${i18Lang}/account/dashboard/ProfilePassword`); // Change '/edit-profile' to the desired route
-  };
-
+ 
   return (
     <div className='profile-about dashboard-bg-box'>
       <Row>
         <Col xxl={7}>
           <div className='dashboard-title mb-3 d-flex justify-content-between align-items-center'>
             <h3>{t('ProfileInformation')}</h3>
-            <button className='btn btn-primary' onClick={handleEditClick}>
-              {t('Edit')}
-            </button>
+            
           </div>
 
           <div className='table-responsive'>

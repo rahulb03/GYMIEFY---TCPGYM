@@ -116,7 +116,7 @@ h2 {
 .requirements1 li {
     margin-bottom: 5px;
     display: flex;
-    align-items: ;
+    /* align-items: ; */
     font-size:15px;
 }
 
@@ -163,3 +163,15 @@ h2 {
 .message-button1 {
     background-color: #ffd700;
 }
+
+
+.roman {
+    min-height: 400px; 
+    /* padding: 20px; */
+    background-color: #fff;
+    text-align: center;
+    max-height: 100vh !important;
+    /* margin-top:20px; */
+     /* border: 1px solid #ccc; */
+  }
+    
