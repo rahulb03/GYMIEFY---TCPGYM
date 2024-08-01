@@ -1,4 +1,4 @@
-.centered-message {
+ .centered-message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,10 +59,13 @@
 }
 
 .search {
+  /* margin-left:10px; */
   border: 1px solid black;
   padding: 5px;
   border-radius: 10px;
   height: 60px;
+  /* margin-right:30px !important; */
+ 
   background-color: white;
 }
 
@@ -70,7 +73,6 @@
   border-radius: 0;
   margin-left: 5px;
   border: none;
-  /* height: 60px; */
   box-shadow: none;
   font-size: 16px;
 }
@@ -95,7 +97,6 @@
 
 .btn-search {
   background-color: #ffa53b;
-  /* border-color: #ffa53b; */
   color: white;
   padding: 10px 10px;
   margin-right: 5px;
@@ -106,14 +107,12 @@
   margin-right: 50px;
   position: absolute;
   top: 100%;
-  /* margin-left:50px; */
   width: 100%;
   background: white;
   border: 1px solid #ced4da;
   z-index: 10;
   list-style-type: none;
   padding: 0;
-  /* margin: 0; */
 
   max-height: 200px;
   overflow-y: scroll;
@@ -176,3 +175,199 @@
     width: calc(100% - 20px);
   }
 }
+ 
+
+.search-mobile{
+  /* margin-right: 20px !important; */
+  /* background-color:red !important; */
+}
+/* 
+ .centered-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+.job-post {
+  margin-left: 30px;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.job-details {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.job-image {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.search {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+}
+
+.form-control1 {
+  border-radius: 0;
+  margin-left: 5px;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.form-control2 {
+  border-radius: 0;
+  margin-left: 5px;
+  border-left: 1px solid black;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+}
+
+.clear-input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffa53b;
+}
+
+.btn-search {
+  background-color: #ffa53b;
+  color: white;
+  padding: 10px 10px;
+  margin-right: 5px;
+}
+
+.suggestions-list {
+  margin-top: 15px;
+  margin-right: 50px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background: white;
+  border: 1px solid #ced4da;
+  z-index: 10;
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.alert-warning {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-footer:hover {
+  background-color: var(--theme-color);
+}
+
+.job-card {
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-card:hover .card-footer {
+  background-color: #ffa53b;
+}
+
+.card-footer {
+  transition: background-color 0.2s;
+}
+
+@media (max-width: 992px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search {
+    width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .form-control1,
+  .form-control2,
+  .btn-search {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .suggestions-list {
+    width: calc(100% - 20px);
+  }
+}
+ */
