@@ -805,7 +805,6 @@ const BrowserJob = () => {
                         <h6>{job?.shortDescription}</h6>
                       </div>
 
-                      {/* <span className='class-header'>{job.jobType.name}</span> */}
 
 
                     </div>
@@ -831,8 +830,7 @@ const BrowserJob = () => {
                   <CardFooter className='py-3 d-flex justify-content-between align-items-center card-footer'>
                       <span>Posted on: {job?.updatedAt}</span>
                       <h5><b>Apply</b></h5>
-                    {/* <h6>Apply {job.CreatedAt}</h6> */}
-                    {/* <h6> {job.jobType.name} </h6> */}
+
                   </CardFooter>
                 </Card>
               ))
@@ -846,3 +844,6 @@ const BrowserJob = () => {
 };
 
 export default BrowserJob;
+
+
+

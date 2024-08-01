@@ -19,7 +19,7 @@ const AccountDashboard = () => {
             <TabContent>
               <TabPane className='show active'>
                 <DashboardContent /> 
-                <ProfilePassword />
+                {/* <ProfilePassword /> */}
                 {/* <ProfilePassword /> */}
               </TabPane>
             </TabContent>
