@@ -64,7 +64,7 @@ const ParisTheme = () => {
   return (
     <>
       <BrowserJob /> 
-p       {/* <Image src="/public/assets/images/category/accessorise.png" alt="alt" width={55} height={55} /> */}
+     {/* <Image src="/public/assets/images/category/accessorise.png" alt="alt" width={55} height={55} /> */}
     </>
   )
 }
