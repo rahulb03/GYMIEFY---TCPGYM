@@ -143,6 +143,14 @@
   align-items: center;
 }
 
+.alert-danger {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .card-footer:hover {
   background-color: var(--theme-color);
 }
