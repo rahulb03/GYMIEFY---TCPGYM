@@ -1,7 +1,7 @@
 
 "use client";
 import { useEffect, useContext, useState } from "react";
-import { RiArrowRightLine, RiCloseCircleLine } from "react-icons/ri";
+import { RiArrowRightLine } from "react-icons/ri";
 import { Card, CardBody, CardFooter, Container } from "reactstrap";
 import I18NextContext from "@/Helper/I18NextContext";
 import { useTranslation } from "@/app/i18n/client";
