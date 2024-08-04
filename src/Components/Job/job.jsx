@@ -522,8 +522,12 @@ const Job = () => {
           </div>
         </Container>
       </section>
+
+
+
     </>
   );
 };
 
 export default Job;
+

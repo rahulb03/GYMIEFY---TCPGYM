@@ -326,8 +326,8 @@ export const jobData = [
  //base url site 
 
 
-  export const API_BASE_URL = 'http://77.37.47.144:4200/api/frontend/'
-  export const FRONTEND_BASE_URL = window?.location?.hostname == 'gymiefy-tcpgym-g5c4.vercel.app' ? 'https://gymiefy-tcpgym-g5c4.vercel.app/' : 'http://localhost:3000/'
+  export const API_BASE_URL = window?.location?.hostname == 'gymis.in' ? 'https://api.gymis.in/api/' : 'https://api.gymis.in/api/'
+  export const FRONTEND_BASE_URL = window?.location?.hostname == 'gymis.in' ? 'https://gymis.in/' : 'http://localhost:3000/'
 
 
   //front end urls
