@@ -211,7 +211,8 @@ const Job = () => {
   };
 
   const renderSkeleton = () => (
-    <Card className="h-100 p-0 job-card">
+   
+   <Card className="h-100 p-0 job-card">
       <CardBody className="p-2 d-flex flex-column">
         <div className="d-flex job-image">
           <Skeleton height={90} width={90} circle={true} />

@@ -6,13 +6,6 @@
   font-size: 1.5rem;
 }
 
-/* *{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 1.5rem;
-} */
 
 
 .job-post {
@@ -137,14 +130,14 @@
 }
 
 .warning1 {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .danger1 {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
