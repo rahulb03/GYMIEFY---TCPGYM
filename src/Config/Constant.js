@@ -326,7 +326,7 @@ export const jobData = [
  //base url site 
 
 
-  export const API_BASE_URL = window?.location?.hostname == 'gymis.in' ? 'https://api.gymis.in/api/' : 'https://api.gymis.in/api/'
+  export const API_BASE_URL = window?.location?.hostname == 'gymis.in' ? 'https://api.gymis.in/api/frontend/' : 'https://api.gymis.in/api/frontend/'
   export const FRONTEND_BASE_URL = window?.location?.hostname == 'gymis.in' ? 'https://gymis.in/' : 'http://localhost:3000/'
 
 
