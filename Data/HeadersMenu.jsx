@@ -53,7 +53,7 @@ export const headerMenu = [
   {
     id: 3,
     title: 'Trainer',
-    // path: '/trainer'
+    path: '/trainer'
   },
   {
     id: 4,

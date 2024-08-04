@@ -136,14 +136,14 @@
   background-color: #f8f9fa;
 }
 
-.alert-warning {
+.warning1 {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.alert-danger {
+.danger1 {
   height: 100vh;
   display: flex;
   justify-content: center;

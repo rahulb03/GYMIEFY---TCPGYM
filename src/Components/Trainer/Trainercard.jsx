@@ -65,16 +65,34 @@ import './trainercard.css';
 import images from '../../../public/assets/images/about-avatar.png';
 import Image from 'next/image';
 
+const users = [
+    { name: 'John Doe', rating: 4.3, image: 'https://via.placeholder.com/80' , location:'surat' },
+    { name: 'Jane Doe', rating: 4.5, image: 'https://via.placeholder.com/80' },
+    { name: 'John Smith', rating: 4.1, image: 'https://via.placeholder.com/80' },
+    { name: 'Jane Smith', rating: 4.7, image: 'https://via.placeholder.com/80' },
+    { name: 'John Doe', rating: 4.3, image: 'https://via.placeholder.com/80' },
+    { name: 'Jane Doe', rating: 4.5, image: 'https://via.placeholder.com/80' },
+    { name: 'John Doe', rating: 4.3, image: 'https://via.placeholder.com/80' },
+    { name: 'Jane Doe', rating: 4.5, image: 'https://via.placeholder.com/80' },
+    { name: 'John Smith', rating: 4.1, image: 'https://via.placeholder.com/80' },
+    { name: 'Jane Smith', rating: 4.7, image: 'https://via.placeholder.com/80' },
+    { name: 'John Doe', rating: 4.3, image: 'https://via.placeholder.com/80' },
+    { name: 'Jane Doe', rating: 4.5, image: 'https://via.placeholder.com/80' },
+  ];
+  
+
 const ProfileCard = () => {
     return (
         <>
-        <div className='roman'>
+        <div className='roman '>
         
-         <div className="card1">
+     <div className='card-container1 p-5' style={{ backgroundColor:'black'}} >
+        {users.map( (user, index ) =>  ( 
+         <div className="card1" key={index}>
             
             <div className="card-header1">
                 <div className="rating1">
-                    <span>4.3</span>
+                    <span>{user.rating}</span>
                     <span className="star1">&#9733;</span>
                 </div>
            
@@ -85,10 +103,10 @@ const ProfileCard = () => {
                 <div className="image-container1">
                     <Image src={images} alt="Profile" width={100} height={100} className="profile-image1" />
                     <div>
-                        <h2 className='image-name1'> John Done</h2>
+                        <h2 className='image-name1'> {user.name}</h2>
                         <div className="location1">
                             <span className="location-icon1">&#x1F4CD;</span>
-                            <span>Ahmedabad</span>
+                            <span>{user.location}</span>
                         </div>
                     </div>
                 </div>
@@ -110,8 +128,10 @@ const ProfileCard = () => {
                 <button className="message-button1">Message</button>
 
             </div>
-
+        
         </div>
+    ))};
+    </div>
     </div>
     </>
     );

@@ -2145,12 +2145,12 @@ const BrowserJob = () => {
       <section className="faq-box-contain section-b-space">
         <Container>
           {noResults && (
-            <div className="alert alert-warning" role="alert">
+            <div className=" warning1" role="alert">
               Please enter a valid keyword for job title and location.
             </div>
           )}
           {error && (
-            <div className="alert alert-danger " role="alert">
+            <div className=" danger1 " role="alert">
               Network error, please try again later.
             </div>
           )}

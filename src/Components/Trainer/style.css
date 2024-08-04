@@ -151,12 +151,9 @@
 
 .roman {
   min-height: 400px; 
-  /* padding: 20px; */
   background-color: #fff;
   text-align: center;
   max-height: 100vh !important;
-  /* margin-top:20px; */
-   /* border: 1px solid #ccc; */
 }
   
 
