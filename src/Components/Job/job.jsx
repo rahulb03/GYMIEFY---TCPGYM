@@ -254,6 +254,8 @@ const Job = () => {
 
   return (
     <>
+
+    {/* search bar for mobile devices*/}
       <form
         className="d-flex align-items-center search search-mobile"
         style={{ maxWidth: "630px", margin: "0 auto" }}
@@ -278,6 +280,7 @@ const Job = () => {
                 value={combinedInput}
                 onChange={handleCombinedInputChange}
               />
+            
               {combinedInput && (
                 <IoMdClose
                   className="clear-input-icon"
@@ -291,6 +294,7 @@ const Job = () => {
                   }}
                 />
               )}
+           
               {combinedInput &&
                 (suggestions.jobTitles.length > 0 ||
                   suggestions.locations.length > 0) && (
@@ -323,6 +327,8 @@ const Job = () => {
           </>
         ) : (
           <>
+          {/* search bar for desktop */}
+           
             <FaSearch
               style={{
                 marginLeft: "10px",
@@ -374,6 +380,7 @@ const Job = () => {
                 </ul>
               )}
             </div>
+         
             <FaLocationDot
               style={{
                 marginLeft: "10px",
@@ -426,6 +433,7 @@ const Job = () => {
             </div>
           </>
         )}
+      
         <button
           type="submit"
           className="btn btn-search text-white"
@@ -434,7 +442,10 @@ const Job = () => {
           Find jobs
         </button>
       </form>
+  
 
+
+  {/* job card */}
       <section className="faq-box-contain section-b-space">
         <Container>
           {noResults && (
