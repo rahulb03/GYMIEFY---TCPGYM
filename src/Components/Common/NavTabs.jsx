@@ -8,6 +8,7 @@ import { useContext, useState } from 'react';
 import { RiLogoutBoxLine } from 'react-icons/ri';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import ConfirmationModal from './ConfirmationModal';
+import { SIGN_OUT } from '@/Config/Constant';
 
 const NavTabTitles = ({ classes = {}, activeTab, setActiveTab, titleList, isLogout, callBackFun }) => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const NavTabTitles = ({ classes = {}, activeTab, setActiveTab, titleList, isLogo
       return activeTab == String(index + 1);
     }
   };
-  const { mutate, isLoading } = useCreate(LogoutAPI, false, false, 'Logout Successfully', () => {
+  const { mutate, isLoading } = useCreate(SIGN_OUT, false, false, 'Logout Successfully', () => {
     Cookies.remove('uat');
     Cookies.remove('ue');
     Cookies.remove('account');
