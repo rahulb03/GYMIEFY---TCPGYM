@@ -346,7 +346,7 @@ export const jobData = [
 
 //   export const GET_JOB = API_BASE_URL + 'job' ;
 
-export const GET_JOB = 'http://77.37.47.144:4200/api/frontend/job';
+export const GET_JOB = API_BASE_URL + 'job';
  
 
   export const INR_LOG = `₹`
