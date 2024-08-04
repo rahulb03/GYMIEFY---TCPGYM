@@ -517,6 +517,7 @@ import Job from './job';
 const BrowserJob = () => {
   return (
     <>
+      {/* job card component */}
           <Job />
     </>
   )

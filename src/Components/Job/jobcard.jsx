@@ -352,8 +352,8 @@ const BrowserJob = () => {
   const [noResults, setNoResults] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const predefinedJobKeywords = ['Engineer', 'Manager', 'Developer', 'Designer', 'Analyst'];
-  const predefinedLocations = ['Surat', 'Gujarat', 'India', 'Dindoli', 'Pune', 'Mumbai'];
+  const predefinedJobKeywords = ['trainer', 'zumba trainer', 'personal trainer', 'fitness trainer'];
+  const predefinedLocations = ['Dindoli', 'navagam', 'udhna', 'godadara', 'pandesara', ];
 
   //api calling 
   useEffect(() => {
@@ -432,6 +432,7 @@ const BrowserJob = () => {
     setFilteredJobs(filtered);
   };
 
+  //job title change
   const handleJobTitleChange = (e) => {
     const value = e.target.value;
     setJobTitleInput(value);
@@ -440,6 +441,8 @@ const BrowserJob = () => {
     setSuggestions({ ...suggestions, jobTitles: jobTitles.length > 0 ? jobTitles : [] });
   };
 
+
+  // location change
   const handleLocationChange = (e) => {
     const value = e.target.value;
     setLocationInput(value);
@@ -447,6 +450,8 @@ const BrowserJob = () => {
     const locations = predefinedLocations.filter(loc => loc.toLowerCase().includes(value.toLowerCase()));
     setSuggestions({ ...suggestions, locations: locations.length > 0 ? locations : [] });
   };
+
+  //unified search change
 
   const handleUnifiedSearchChange = (e) => {
     const value = e.target.value;
@@ -460,6 +465,8 @@ const BrowserJob = () => {
     setSuggestions({ ...suggestions, unified: combinedSuggestions.length > 0 ? combinedSuggestions : [] });
   };
 
+
+  //suggestioin click
   const handleSuggestionClick = (type, value) => {
     if (type === 'jobTitle') {
       setJobTitleInput(value);
@@ -472,7 +479,9 @@ const BrowserJob = () => {
       setSuggestions({ ...suggestions, unified: [] });
     }
   };
+ 
 
+  //clear input
   const handleClearInput = (type) => {
     if (type === 'jobTitle') {
       setJobTitleInput('');
